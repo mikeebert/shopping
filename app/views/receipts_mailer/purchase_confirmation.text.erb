@@ -1,0 +1,8 @@
+Thank you for purchase. Below are the details of your order.
+
+Customer: <%= @order.name %>
+<%= @order.cart.items.each do |item| %>
+  Item: <%= item.product.name %>
+<% end %>
+
+Please contact customer service if you have any questions.

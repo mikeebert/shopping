@@ -1,0 +1,8 @@
+<div id="purchase">
+  <%= form_tag(buy_url, :method => :get) do %>
+    <p><strong>Name </strong><%= text_field_tag :name, nil, :placeholder => "First and Last"  %></p>
+    <p><strong>Email </strong><%= text_field_tag :email, nil, :placeholder => "Enter email address" %></p>
+    <p><%= select_tag :card, options_for_select([["Visa", "Visa"], ["M/C", "M/C"], ["Discover", "Discover"], ["Amex", "Amex"]]), :prompt => "Card Type" %> <strong>Card Number </strong><%= text_field_tag :card_number, nil, :placeholder=>"Enter card number" %></p>
+    <%= submit_tag "Complete Purchase", :confirm => "Please confirm your purchase..." %>
+  <% end %>
+</div>

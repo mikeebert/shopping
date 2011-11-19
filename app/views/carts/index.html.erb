@@ -1,0 +1,18 @@
+
+Products for sale: 
+<ul>
+<% @products.each do |product| %>
+  <li><%= product.name %> - <%= link_to "Add to Cart", new_item_url(:product_id => product.id), :remote => true, :method => :put %></li>
+<% end %>
+</ul>
+
+Items in your cart:
+<ul id="items">
+  <% @cart.items.each do |item| %>
+    <%= render 'item', :item => item %>
+  <% end %>
+</ul>
+
+<%= button_to "Checkout", "#", :id => "checkout" %>
+
+<%= render 'purchaseform' %>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="header">
+    <h1>Mike's Little Shop</h1>
+  </div>
+  <div id="notice">
+    <%= flash[:notice] %>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>
