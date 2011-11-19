@@ -1,7 +1,7 @@
 Thank you for purchase. Below are the details of your order.
 
 Customer: <%= @order.name %>
-<%= @order.cart.items.each do |item| %>
+<% @order.cart.items.each do |item| %>
   Item: <%= item.product.name %>
 <% end %>
 
